@@ -1,6 +1,5 @@
 import React from "react";
 import { debounce } from "lodash";
-import { LOAD_STATUSES } from "../constants";
 import { Loader } from "./common";
 import "./styles.css";
 import { connect } from "react-redux";
