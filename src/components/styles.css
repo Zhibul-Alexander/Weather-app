@@ -1,17 +1,19 @@
 .wrapper {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 10px;
+    padding: 30px;
+    margin: auto 0;
 
     font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
     font-size: 20px;
     font-weight: 300;
     line-height: 22px;
+
+    text-align: center;
 }
 
 input {
-    width: 98.5%;
-    padding: 10px 0px 10px 20px;
+    width: 50%;
+    padding: 15px 0px 15px 20px;
+    margin-bottom: 20px;
 
     border: 1px solid #AFCDE7;
     border-radius: 56px;
@@ -29,15 +31,13 @@ input {
     flex-direction: column;
     justify-content: center;
 }
-h1 {
-    text-align: center;
-}
+
 table {
     border-collapse: collapse;
     text-align: center;
 }
 
-th, td{
+th, td {
     border-style: solid;
     border-width: 0 1px 1px 0;
     border-color: white;
@@ -54,4 +54,3 @@ td {
     color: black;
     background: #D8E6F3;
 }
-

@@ -1,0 +1,5 @@
+body {
+    background: url(./images/weather.jpeg) top no-repeat fixed;
+    background-size:100%;
+    min-width: 650px;
+}
