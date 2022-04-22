@@ -1,1 +1,0 @@
-export { getCurrentWeather } from "./weather";
