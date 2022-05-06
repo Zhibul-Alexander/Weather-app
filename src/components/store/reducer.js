@@ -1,7 +1,7 @@
 import { LOAD_STATUSES } from "../../constants/loadStatuses";
 import { WeatherActions } from "./constants";
 
-const INITTIAL_STATE = {
+export const INITTIAL_STATE = {
   data: {},
   loadStatus: LOAD_STATUSES.UNKNOWN,
 };
