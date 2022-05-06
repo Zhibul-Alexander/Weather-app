@@ -19,17 +19,14 @@ export const useWeather = () => {
   const dispatch = useDispatch();
   const getWeather = (city) => dispatch(WeatherAC.fetchWeather(city));
 
-  const fetchWeatherDebounce = useCallback(
-    () => debounce(getWeather, 1000),
-    []
-  );
+  const fetchWeatherDebounce = useCallback(debounce(getWeather, 3000), []);
 
   useEffect(() => {
-    getWeather(city);
+    getWeather({ city });
   }, []);
 
   useEffect(() => {
-    fetchWeatherDebounce(city);
+    fetchWeatherDebounce({ city });
   }, [city]);
 
   return { city, data, isError, isLoaded, isLoading, onChangeCity };
