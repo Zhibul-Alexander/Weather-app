@@ -1,8 +1,8 @@
 import { useState, useEffect, useCallback } from "react";
 import { debounce } from "lodash";
 import { WeatherSelectors } from "./store";
-import { WeatherAC } from "./store";
 import { useSelector, useDispatch } from "react-redux";
+import { fetchWeather } from "./store/slice";
 
 export const useWeather = () => {
   const [city, setCity] = useState("Minsk");
@@ -17,9 +17,14 @@ export const useWeather = () => {
   const isError = useSelector(WeatherSelectors.isError);
 
   const dispatch = useDispatch();
-  const getWeather = (city) => dispatch(WeatherAC.fetchWeather(city));
+  const getWeather = (city) => dispatch(fetchWeather(city));
 
   const fetchWeatherDebounce = useCallback(debounce(getWeather, 3000), []);
+
+  // const fetchWeatherDebounce = useCallback(
+  //   debounce((city) => getWeather(city), 1000),
+  //   []
+  // );
 
   useEffect(() => {
     getWeather({ city });

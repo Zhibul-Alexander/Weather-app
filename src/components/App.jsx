@@ -22,16 +22,20 @@ export function App() {
           <h2>Forecast:</h2>
           <table>
             <thead>
-              <th>Temperature</th>
-              <th>Min temperature</th>
-              <th>Max temperature</th>
-              <th>Humidity</th>
+                <tr>
+                  <th>Temperature</th>
+                  <th>Min temperature</th>
+                  <th>Max temperature</th>
+                  <th>Humidity</th>
+                </tr>
             </thead>
             <tbody>
-              <td>{weatherController.data.temp}</td>
-              <td>{weatherController.data.temp_max}</td>
-              <td>{weatherController.data.temp_min}</td>
-              <td>{weatherController.data.humidity}</td>
+              <tr>
+                <td>{weatherController.data.temp}</td>
+                <td>{weatherController.data.temp_max}</td>
+                <td>{weatherController.data.temp_min}</td>
+                <td>{weatherController.data.humidity}</td>
+              </tr>
             </tbody>
           </table>
         </div>
